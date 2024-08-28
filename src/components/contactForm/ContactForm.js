@@ -19,7 +19,7 @@ export const ContactForm = ({
         pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"/>
         <label htmlFor="email">Email</label>
         <input id="email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <button type="submit">Submit</button>
+        <input type="submit" value="Submit" />
       </form>
     </>
   );
