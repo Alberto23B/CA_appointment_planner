@@ -9,8 +9,8 @@ function App() {
   Define state variables for 
   contacts and appointments 
   */
- const [aptData, setAptData] = useState([])
- const [contactData, setContactData] = useState([])
+ const [appointments, setAppointments] = useState([])
+ const [contacts, setContacts] = useState([])
 
   /*
   Implement functions to add data to
@@ -18,29 +18,29 @@ function App() {
   */
  const addAppointment = (name, contact, date, time) => {
   const newApp = {
-    [name] : name,
-    [contact] : contact,
-    [date] : date,
-    [time] : time
+    name: name,
+    contact: contact,
+    date: date,
+    time: time
   }
-  setAptData((prev) => [...prev, newApp])
+  setAppointments((prev) => [...prev, newApp])
  };
 
  const addContact = (name, phone, email) => {
   const newContact = {
-    [name]: name,
-    [phone]: phone,
-    [email]: email
+    name: name,
+    phone: phone,
+    email: email
   }
-  setContactData((prev) => [...prev, newContact])
+  setContacts((prev) => [...prev, newContact])
  }
 
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root/> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
-      <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contactData} addContact={addContact}/> /* Add props to ContactsPage */ }/>
-      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage apt={aptData} cnt={contactData} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
+      <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
+      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
     </Route>
   ));
   
