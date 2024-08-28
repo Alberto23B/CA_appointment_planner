@@ -40,7 +40,7 @@ function App() {
     <Route path="/" element={ <Root/> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contact={contactData} addContact={addContact}/> /* Add props to ContactsPage */ }/>
-      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage apt={aptData} addApt={addAppointment}/> /* Add props to AppointmentsPage */ }/>
+      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage apt={aptData} contact={contactData} addApt={addAppointment}/> /* Add props to AppointmentsPage */ }/>
     </Route>
   ));
   
