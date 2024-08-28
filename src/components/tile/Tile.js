@@ -1,9 +1,11 @@
 import React from "react";
 
-export const Tile = () => {
+const Tile = () => {
   return (
     <div className="tile-container">
       
     </div>
   );
 };
+
+export default Tile
