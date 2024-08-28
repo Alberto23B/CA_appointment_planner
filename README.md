@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is originally a CodeAcademy project meant to learn React's skills. It provides a structrure which have to be used to develop the components.
 
 ## Available Scripts
 
