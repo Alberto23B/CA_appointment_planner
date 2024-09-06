@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/CA_appointment_planner/static/js/main.d4dda515.js",
+    "main.js": "/CA_appointment_planner/static/js/main.e96ad8de.js",
     "index.html": "/CA_appointment_planner/index.html",
-    "main.d4dda515.js.map": "/CA_appointment_planner/static/js/main.d4dda515.js.map"
+    "main.e96ad8de.js.map": "/CA_appointment_planner/static/js/main.e96ad8de.js.map"
   },
   "entrypoints": [
-    "static/js/main.d4dda515.js"
+    "static/js/main.e96ad8de.js"
   ]
 }
