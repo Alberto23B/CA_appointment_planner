@@ -47,7 +47,7 @@ export const ContactsPage = ( {contacts, addContact } ) => {
       setIsDuplicate(false);
     }
   }, [name, contacts, isDuplicate])
-
+   
   return (
     <div>
       <section>
