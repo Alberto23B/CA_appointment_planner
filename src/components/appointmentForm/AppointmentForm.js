@@ -1,5 +1,6 @@
 import React from "react";
 import { ContactPicker } from "../contactPicker/ContactPicker"
+import Time from "../Time";
 
 const getTodayString = () => {
   const [month, day, year] = new Date()
@@ -35,7 +36,8 @@ export const AppointmentForm = ({
         <input id="date" type="date" name="date" value={date} onChange={(e) => setDate(e.target.value)}
         min={getTodayString()} aria-label="date" required/>
         <label htmlFor="time">Time</label>
-        <input id="time" type="time" name="time" value={time} step="1800" onChange={(e) => setTime(e.target.value)} aria-label="time" required/>
+        <Time name="time" value={time} onChange={(value) => setTime(value)} />
+        {/* <input id="time" type="time" name="time" value={time} step="1800" onChange={(e) => setTime(e.target.value)} aria-label="time" required/> */}
         <input type="submit" value="Submit" aria-label="submit"/>
       </form>
     </>

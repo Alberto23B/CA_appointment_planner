@@ -4,10 +4,7 @@ import { AppointmentForm } from "../../components/appointmentForm/AppointmentFor
 import { TileList } from "../../components/tileList/TileList";
 
 export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
-  /*<
-  Define state variables for 
-  appointment info
-  */
+
  const [title, setTitle] = useState("");
  const [contact, setContact] = useState("");
  const [date, setDate] = useState("");
@@ -16,7 +13,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!checkDuplicate) {
+    if (!checkDuplicate && title && contact && date && time) {
       addAppointment(title, contact, date, time); 
       setTitle("");
       setContact("");
@@ -39,7 +36,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
     } else {
       setCheckDuplicate(false);
     }
-  }, [appointments, date, time, checkDuplicate])
+  }, [appointments, date, time])
 
   return (
     <div>
@@ -54,7 +51,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
         time={time} setTime={setTime}
         handleSubmit={handleSubmit}
         />
-        {checkDuplicate && <p>That date and time is already picked</p>}
+        {checkDuplicate && <p style={{color: "red", fontWeight: "bold", textAlign: "center"}}>That date and time is already picked</p>}
       </section>
       <hr />
       <section>
