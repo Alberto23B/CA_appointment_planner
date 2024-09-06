@@ -21,7 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Dev Goals
 - Accomplish main CodeAcademy goals
 - Use React hooks and props to pass data
-- Add functionality and validations regarding how the app stores the data
+- Add functionality and validations regarding how the user insert data
+- Avoid duplicates
 - Keep track of changes with Git
 - Deploy using Vercel
 
@@ -34,16 +35,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Store data in state and display the data through UI
 - Handle incorrect or incomplete submit
+- Block an insertion if date and time are already picked 
 
 ## Project Status
-Project is: _in progress_ 
-
-
+Project is: _completed_ 
+ 
 ## ToDo's - Room for Improvement
-
-To do:
- - Handle incorrect or incomplete submit
-
+Improvements:
+- Change the form by using a controlled component with set values for time instead of a time input to limit the user choice
 
 ## Acknowledgements
 - This project was based on [this CodeAcademy project](https://www.codecademy.com/projects/practice/appointment-planner).
@@ -51,12 +50,4 @@ To do:
 
 ## Contact
 Created by @alberto23b - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
-
 

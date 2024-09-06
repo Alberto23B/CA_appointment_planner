@@ -29,14 +29,14 @@ export const AppointmentForm = ({
     <>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title</label>
-        <input id="title" type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
+        <input id="title" type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} aria-label="title" required/>
         <ContactPicker name="contact" value={contact} contacts={getContactNames()} onChange={(e) => setContact(e.target.value)} />
         <label htmlFor="date">Date</label>
         <input id="date" type="date" name="date" value={date} onChange={(e) => setDate(e.target.value)}
-        min={getTodayString()}/>
+        min={getTodayString()} aria-label="date" required/>
         <label htmlFor="time">Time</label>
-        <input id="time" type="time" name="time" value={time} onChange={(e) => setTime(e.target.value)}/>
-        <input type="submit" value="Submit" />
+        <input id="time" type="time" name="time" value={time} step="1800" onChange={(e) => setTime(e.target.value)} aria-label="time" required/>
+        <input type="submit" value="Submit" aria-label="submit"/>
       </form>
     </>
   );

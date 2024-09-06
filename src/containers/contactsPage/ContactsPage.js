@@ -8,18 +8,9 @@ export const ContactsPage = ( {contacts, addContact } ) => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isDuplicate, setIsDuplicate] = useState(false);
-  /*
-  Define state variables for 
-  contact info and duplicate check
-  */
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data
-    if the contact name is not a duplicate
-    */
    if (!isDuplicate) {
     addContact(name, phone, email)
     setName("");
@@ -28,10 +19,6 @@ export const ContactsPage = ( {contacts, addContact } ) => {
    }
   };
 
-  /*
-  Using hooks, check for contact name in the 
-  contacts array variable in props
-  */
   useEffect(() => {
     const nameIsDuplicate = () => {
       const found = contacts.find((contact) => contact.name === name);
