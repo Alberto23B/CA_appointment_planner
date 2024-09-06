@@ -42,7 +42,9 @@ function App() {
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
       <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
     </Route>
-  ));
+  ), {
+    basename: "/CA_appointment_planner"
+  });
   
   return (
     <RouterProvider router={router}/>
